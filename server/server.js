@@ -3,6 +3,7 @@ import express from "express"
 import cors from "cors"
 import { connect } from 'mongoose'
 import connectDB from './configs/db.js'
+import userRouter from './routes/userRoutes.js'
 
 
 //port and app configuration
@@ -23,6 +24,10 @@ app.use(express.json())
 
 //API Routes
 app.get('/',(req,res)=> res.send(`AniBgRemover Backend is Running`))
+
+app.use('/api/user',userRouter)
+
+
 
 
 //starting server

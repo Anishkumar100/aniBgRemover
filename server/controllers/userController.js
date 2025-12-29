@@ -1,5 +1,5 @@
 import { Webhook } from "svix"
-import userModel from "../models/userModel"
+import userModel from "../models/userModel.js"
 
 /*
 Before we start using the 1st controller, we need to get the clerk_webhook_secret. Thus, we first deployed this backend. And in the clerk webhook dashboard we add this url at the url option https://anibg-remover.vercel.app/api/user/webhooks
