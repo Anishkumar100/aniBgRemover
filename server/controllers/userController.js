@@ -13,7 +13,7 @@ export const clerkWebHooks = async (req, res) => {
     try {
         //create a Svix instance with clerk webhook secret
 
-        const whook = new Webhook(process.meta.env.CLERK_WEBHOOK_SECRET)
+        const whook = new Webhook(process.env.CLERK_WEBHOOK_SECRET)
 
         await whook.verify(JSON.stringify(req.body), {
             "svix-id": req.headers["svix-id"],
